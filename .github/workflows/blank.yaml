@@ -38,4 +38,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: |
-          echo {{ vars.FILE_TO_CHECK }}
+          echo ${{ vars.FILE_TO_CHECK }}
