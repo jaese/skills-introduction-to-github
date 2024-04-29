@@ -31,5 +31,4 @@ jobs:
   report-url-2:
     runs-on: self-hosted
     steps:
-      - run: echo ${{ github.server_url }}/${{ github.repository }}
-/actions/runs/${{ github.run_id }}
+      - run: echo ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
