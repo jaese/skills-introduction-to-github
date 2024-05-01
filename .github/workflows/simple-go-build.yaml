@@ -2,8 +2,6 @@ name: Simple Go Build
 
 on:
   push:
-    branches:
-      - mine
 
 jobs:
   build:
