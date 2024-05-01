@@ -1,9 +1,10 @@
 name: Simple Go Build
 
 on:
-  push:
-    branches:
-      - mine
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - mine
 
 jobs:
   build:
