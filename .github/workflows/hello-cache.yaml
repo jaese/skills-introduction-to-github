@@ -1,0 +1,26 @@
+name: Hello Cache
+
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Cache Primes
+        id: cache-primes
+        uses: actions/cache@v4
+        with:
+          path: ./prime-numbers
+          key: ${{ runner.os }}-primes
+
+      - name: Generate Prime Numberes
+        if: steps.cache-primes.outputs.cache-hit != 'true'
+        run: echo 7 > ./prime-numbers
+
+      - name: Use Prime Numbers
+        run: |
+          echo 'PRIME NUMBERS'
+          cat ./prime-numbers
