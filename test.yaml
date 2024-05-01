@@ -1,0 +1,9 @@
+name: Test
+
+on: push
+
+jobs:
+  report-url:
+    runs-on: self-hosted
+    steps:
+      - run: echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
